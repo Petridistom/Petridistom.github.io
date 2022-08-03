@@ -55,7 +55,7 @@ body {
 
 }
 .sections { /* this CSS creates the boxes around my class .sections....... very cool*/
-    
+    font-size: large;
     margin: 0 auto;
     max-width: 77em;
     display: block;
@@ -93,7 +93,6 @@ body {
 
 
 a {
-
     font-size: 35px;
     color: black;
     text-decoration: none;
