@@ -1,0 +1,180 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete  colour 3 5 are my favourite colours from zelda botw*/
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#0f8693;
+  --col-04:lightgrey;
+  --col-05:#d4af37;
+  --col-06:whitesmoke;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-03);
+  color: var(--col-01);
+  transition: ease-in 1s;
+}
+
+.buttons{
+  float: right;
+}
+
+.bttn{
+  background-color: var(--col-06);
+  border: groove;
+}
+
+.blink{
+  color: var(--col-03);
+}
+
+.bttn:hover {
+  animation: colorCycle 1s 1;
+}
+
+/* creates animation */
+@keyframes colorCycle{
+  0% {
+    background-color: var(--col-05);
+  }
+  
+  100% {
+    background-color: var(--col-06);
+  }
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+.drpbutton {
+  background-color: var(--col-06);
+  border: groove;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* make content hidden by default and style the menu*/
+.listcontent {
+  display: none;
+  position: absolute;
+  background-color: var(--col-04);
+  /* min-width: 160px; */
+  /* z-index: 1; */
+}
+
+/* displaying Links inside the dropdown */
+.listcontent a {
+  display: inline;
+  font-size: 18px;
+  
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .listcontent {
+  display: inline;
+  padding-right: 22px;
+}
+
+/* Change color of dropdown links on hover */
+.listcontent ol a:hover {
+  background-color: var(--col-05);
+}
+
+
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+/* reduces motion for users with native setting switched on */
+@media (prefers-reduced-motion){
+  a:hover {
+    animation: none;
+  }
+}
