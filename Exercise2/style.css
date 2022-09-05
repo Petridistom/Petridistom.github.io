@@ -81,12 +81,20 @@ li{
   font-size: 1rem;
 }
 
+a{
+  color: var(--col-05);
+}
+
 dd{
   padding-left: 60px;
 }
 
 li ul{
   padding-left: 40px;
+} 
+
+a::before{
+  color: green;
 }
 
 .img-wrapper{
@@ -106,6 +114,7 @@ li ul{
 
 .res-columns{
   column-width: 25rem;
+  
 }
 
 .drpbutton {
