@@ -26,12 +26,12 @@
     <div id="list-filter-wrapper">     
 
       <details class="FilterCategoryWrapper">
-        <summary>Author</summary>
+        <summary>Author</summary> <!-- creates a new filter category for buttons -->
         <button class="FilterSelector" id="kla-author" onclick='filterCategory("KLA", "author")'>J. Kenji López-Alt</button>
         <button class="FilterSelector" id="m-author" onclick='filterCategory("M", "author")'>Maangchidi</button>
         <button class="FilterSelector" id="hm-author" onclick='filterCategory("HM", "author")'>Hetty McKinnon</button>
         <button class="FilterSelector" id="clm-author" onclick='filterCategory("CLM", "author")'>Carla Lalli Music</button>
-      </details>
+      </details> 
 
     </div>
 
@@ -40,7 +40,7 @@
       <details class="FilterCategoryWrapper">
         <summary>Dietary</summary>
         <button class="FilterSelector" onclick='filterCategory("yes", "veg")'>Vegetarian</button>
-        <button class="FilterSelector" id="m-author" onclick='filterCategory("yes", "glut")'>Gluten Free</button>
+        <button class="FilterSelector" onclick='filterCategory("yes", "gf")'>Gluten Free</button>
       </details>
 
     </div>
@@ -49,8 +49,9 @@
 
       <details class="FilterCategoryWrapper">
         <summary>Cuisine</summary>
-        <button class="FilterSelector" onclick='filterCategory("yes", "veg")'>Asian</button>
-        <button class="FilterSelector" id="m-author" onclick='filterCategory("yes", "glut")'>Italian</button>
+        <button class="FilterSelector" onclick='filterCategory("yes", "asian")'>Asian</button>
+        <button class="FilterSelector" onclick='filterCategory("yes", "eu")'>European</button>
+        <button class="FilterSelector" onclick='filterCategory("yes", "misc")'>Miscellaneous</button>
       </details>
 
     </div>
@@ -59,12 +60,14 @@
 
     <hr />
 
-    <section id="recipe-list-wrapper">
+    <section id="recipe-list-wrapper"> <!-- data tags allow for the js function to filter each recipe -->
 
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338`);"
            data-author="HM"
            data-veg="yes"
+           data-eu="yes"
+           
            
       >
 
@@ -93,7 +96,7 @@
            onclick="window.open(`https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846`);"
            data-author="HM"
            data-veg="yes"
-           data-glut=""
+           data-gf="yes"
            
       >
 
@@ -122,7 +125,8 @@
            onclick="window.open(`https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe`);"
            data-author="KLA"
            data-veg="yes"
-           
+           data-gf="yes"
+           data-asian="yes"
       >
 
         <img class="RecipeImg" src="./images/Enoki.jpg" alt="enoki mushrooms" />
@@ -150,6 +154,7 @@
            onclick="window.open(`https://www.maangchi.com/recipe/jjinppang`);"
            data-author="M"
            data-veg="yes"
+           data-asian="yes"
            
       >
 
@@ -177,6 +182,7 @@
            onclick="window.open(`https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe`);"
            data-author="KLA"
            data-veg="yes"
+           data-misc="yes"
            
       >
 
@@ -203,7 +209,7 @@
            onclick="window.open(`https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe`);"
            data-author="KLA"
            data-veg="yes"
-           
+           data-asian="yes"
       >
 
         <img class="RecipeImg" src="./images/Grilled_Cheese.jpg" alt="grilled cheese sandwich with pickles" />
@@ -231,6 +237,8 @@
            onclick="window.open(`https://www.patreon.com/posts/recipe-hands-off-60369279`);"
            data-author="CLM"
            data-veg="yes"
+           data-asian="yes"
+
            
       >
 
@@ -258,6 +266,8 @@
            onclick="window.open(`https://www.maangchi.com/recipe/kimchijeon`);"
            data-author="M"
            data-veg="yes"
+           data-gf="yes"
+           data-asian="yes"
            
       >
 
@@ -284,6 +294,8 @@
            onclick="window.open(`https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe`);"
            data-author="KLA"
            data-veg="yes"
+           data-gf="yes"
+           data-misc="yes"
            
       >
 
@@ -310,7 +322,8 @@
            onclick="window.open(`https://www.maangchi.com/recipe/patbingsu`);"
            data-author="M"
            data-veg="yes"
-           
+           data-gf="yes"
+           data-asian="yes"
       >
 
         <img class="RecipeImg" src="./images/Patbingsu.jpg" alt="bowl of shaved ice topped with sweet red beans and fruit" />
@@ -336,6 +349,7 @@
            onclick="window.open(`https://www.patreon.com/posts/pasta-with-sauce-45042575`);"
            data-author="CLM"
            data-veg="yes"
+           data-eu="yes"
           
       >
 
@@ -361,7 +375,9 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.maangchi.com/recipe/yangnyeom-tongdak`);"
            data-author="M"
-           data-veg="no"
+           data-asian="yes"
+           
+
            
       >
 
@@ -389,7 +405,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/ultimate-beef-stroganof-recipe`);"
            data-author="KLA"
-           data-veg="no"
+           data-gf="yes"
+           data-eu="yes"
            
       >
 
@@ -418,7 +435,8 @@
            onclick="window.open(`https://www.patreon.com/posts/recipe-vanilla-60100711`);"
            data-author="CLM"
            data-veg="yes"
-           
+           data-glut="yes"
+           data-misc="yes"
       >
 
         <img class="RecipeImg" src="./images/Pear_Tart.jpg" alt="pear tart on a table" />
@@ -446,7 +464,8 @@
            onclick="window.open(`https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392`);"
            data-author="HM"
            data-veg="yes"
-           
+           data-glut="yes"
+           data-eu="yes"
       >
 
         <img class="RecipeImg" src="./images/Mushroom_Carbonara.jpg" alt="pan filled with mushroom carbonara pasta" />

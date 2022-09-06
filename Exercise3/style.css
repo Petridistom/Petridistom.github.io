@@ -2,13 +2,16 @@
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
+  /* my own font */
+  font-family:'Poppins', sans-serif;
 }
 
 /* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 
 :root{
-  --col-01:#222323;
+  /*chose my own calm colours */
+  --col-01:#2d222e;
   --col-02:#f0f6f0;
   --col-03:#58ff52;
   --col-04:#e178e8;
@@ -74,18 +77,22 @@ summary {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* increased padding to fix overflow issue */
 .RecipeCardWrapper{
   height: 30rem;
   padding: 1rem;
+  padding-bottom: 6rem;
   border: solid var(--col-02) 2px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-/* .RecipeCardWrapper:hover{
+.RecipeCardWrapper:hover{
   border: dotted var(--col-02) 2px;
   cursor: pointer;
-} */
+}
 .RecipeImg{
   object-fit: cover;
   width: 100%;
@@ -98,6 +105,11 @@ summary {
   font-size: 1.5rem;
 }
 
+/* personal touch */
+button:hover{
+  background-color: #403241;
+
+}
 
 /* for screens over 768px wide */
 @media all and (min-width: 768px) {
