@@ -15,6 +15,7 @@
   --col-02:#f0f6f0;
   --col-03:#58ff52;
   --col-04:#e178e8;
+  --col-05:#403241;
 }
 
 body{
@@ -107,8 +108,13 @@ summary {
 
 /* personal touch */
 button:hover{
-  background-color: #403241;
+  background-color: var(--col-05);
 
+}
+
+summary:hover{
+  background-color: var(--col-05);
+  color: var(--col-04);
 }
 
 /* for screens over 768px wide */
