@@ -195,9 +195,10 @@ let urlArray = [
 
 let currentTrack = 0;
 
-// call functions when skip button is clicked
+// call functions when these buttons are clicked
 skip.addEventListener("click", changeTrack);
 skip.addEventListener("click", changeBackground);
+play.addEventListener("click", changeTrackNumber);
 
 // changes the track src url by indexing the next url in the array
 function changeTrack(){
@@ -215,18 +216,32 @@ function changeTrack(){
 
 
 // change the background image for current track
-function changeBackground (){
+// shows and hides css for track numbers
+function changeBackground(){
   if(currentTrack == 0){
     document.body.style.backgroundImage = "url('images/colorwall.png')";
+    document.getElementById("trk0").style.display = "block"
+    document.getElementById("trk3").style.display = "none"
+    
   }
+
   else if(currentTrack == 1){
     document.body.style.backgroundImage = "url('images/desert.png')";
+    document.getElementById("trk1").style.display = "block"
+    document.getElementById("trk0").style.display = "none"
   }
+
   else if(currentTrack == 2){
     document.body.style.backgroundImage = "url('images/musichall.png')";
+    document.getElementById("trk2").style.display = "block"
+    document.getElementById("trk1").style.display = "none"
   }
+
   else if(currentTrack == 3){
     document.body.style.backgroundImage = "url('images/nightgarden.png')";
+    document.getElementById("trk3").style.display = "block"
+    document.getElementById("trk2").style.display = "none"
+
   }
   
 }
