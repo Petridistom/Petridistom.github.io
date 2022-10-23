@@ -1,0 +1,50 @@
+:root{
+  --col-01: white;
+  --col-02: black;
+  --col-03: rgb(85, 85, 85);
+}
+
+
+body{
+    background-color: var(--col-02);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+h1{
+  color: var(--col-01);
+  text-align: center;
+  font-size: xxx-large;
+  padding-bottom: 80px;
+  padding-top: 25px;
+}
+
+.img-container{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2%;
+}
+
+
+#row2{
+display: flex;
+padding-left: 3em;
+
+}
+
+#rowX{
+  margin: 0 auto;
+  max-width: fit-content;
+  display: block;
+
+}
+
+.spec-container{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 12%;
+}
