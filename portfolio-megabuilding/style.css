@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(15, 15, 15);
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+h1{
+    color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+p{
+    color: aliceblue;
+    display: block;
+    text-align: left;
+    margin-left: 12vw;
+    margin-right: 12vw;
+}
+
+a{
+    color: hotpink;
+
+}
+
+a:hover{
+color: white;
+background-color: hotpink;
+}
+
+#project-link{
+    margin-left: 12vw;
+}
+
+#carousel{
+    padding-bottom: 150px
+}
+
+#intro{
+    padding-bottom: 150px;
+}
+
+#tile-imgs1{
+    margin-left: 0.7vw;
+    padding-bottom: 100px;
+}
+
+#tile-imgs{
+    margin-left: 0.7vw;
+}
